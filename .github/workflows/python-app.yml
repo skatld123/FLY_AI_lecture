@@ -19,8 +19,8 @@ jobs:
       uses: mr-smithers-excellent/docker-build-push@v5
       with:
         image: skatld802/flaskapp
-        directory: FLY_AI_lecture/MLOps_CICD/flaskapps
-        dockerfile: FLY_AI_lecture/MLOps_CICD/flaskapps/Dockerfile
+        directory: MLOps_CICD/flaskapps
+        dockerfile: MLOps_CICD/flaskapps/Dockerfile
         tags: v2.0.0, latest
         registry: docker.io
         username: ${{ secrets.DOCKER_USERNAME }}
