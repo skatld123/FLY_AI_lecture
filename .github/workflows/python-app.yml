@@ -19,6 +19,7 @@ jobs:
       uses: mr-smithers-excellent/docker-build-push@v5
       with:
         image: skatld802/flaskapp
+        context: MLOps_CICD/flaskapp
         tags: v2.0.0, latest
         registry: docker.io
         username: ${{ secrets.DOCKER_USERNAME }}
