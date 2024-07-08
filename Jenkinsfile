@@ -6,7 +6,8 @@ pipeline {
     stages {
         stage("build") {
             steps {
-                echo 'building the applicaiton...' echo "building version ${NEW_VERSION}"
+                echo 'building the applicaiton...' 
+                echo "building version ${NEW_VERSION}"
             }
         }
         stage("test") {
@@ -16,7 +17,12 @@ pipeline {
         }
         stage("deploy") {
             steps {
-                echo 'deploying the applicaiton...' withCredentials([[$class: 'UsernamePasswordMultiBinding', credentialsId: 'admin_user_credentials', usernameVariable: 'USER', passwordVariable: 'PWD']]) {
+                echo 'deploying the applicaiton...' 
+                withCredentials([[$class: 'UsernamePasswordMultiBinding', credentialsId: 'admin_user_credentials', 
+                usernameVariable: 'USER', 
+                passwordVariable: 'PWD'
+                ]]) 
+                {
                     sh 'printf ${USER}'
                 }
             }
