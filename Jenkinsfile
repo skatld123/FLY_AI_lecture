@@ -1,5 +1,6 @@
 pipeline {
-    agent any environment {
+    agent any 
+    environment {
         NEW_VERSION = '1.0.0'
     }
     stages {
