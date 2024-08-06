@@ -7,4 +7,6 @@ spec:
   - name: flask
     image: skatld802/flaskapp:v2.0.0
     ports:
-    - containerPort: 80
+    - containerPort: 5000
+  imagePullSecrets:
+  - name: docker-pull-secret

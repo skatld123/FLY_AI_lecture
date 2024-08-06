@@ -1,0 +1,5 @@
+*.pdf
+*.zip
+*.pyc
+AI융합프로그램/data/
+.DS_Store
